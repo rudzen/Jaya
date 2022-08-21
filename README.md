@@ -6,11 +6,9 @@
 <h3 align="center">Jaya File Manager (JayaFM)</h3>
 <p align="center">
   <img alt="Build status" src="https://github.com/nullvoid-creations/Jaya/workflows/build/badge.svg">
-  <a href="https://gitter.im/JayaCrossPlat/Jaya?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge" target="_blank"><img alt="Gitter Chat" src="https://badges.gitter.im/JayaCrossPlat/Jaya.svg"></a>
-  <a href="https://github.com/nullvoid-creations/Jaya/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nullvoid-creations/Jaya"></a>
-  <a href="https://github.com/nullvoid-creations/Jaya/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/nullvoid-creations/Jaya"></a>
-  <a href="/LICENSE" target="_blank"><img alt="MIT license" src="https://img.shields.io/github/license/nullvoid-creations/Jaya"></a>
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DEXCFJ6R48SR2" target="_blank"><img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-green.svg"></a>
+  <a href="https://github.com/waliarubal/Jaya/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/waliarubal/Jaya"></a>
+  <a href="https://github.com/waliarubal/Jaya/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/waliarubal/Jaya"></a>
+  <a href="/LICENSE.md" target="_blank"><img alt="MIT license" src="https://img.shields.io/github/license/waliarubal/Jaya"></a>
 </p>
 
 ## Table Of Contents
@@ -28,9 +26,9 @@
 **Jaya File Manager** is a .NET Core based cross platform file manager application which runs on Windows, Mac and Linux. Its goal is very simple, *"Allow browsing and managing of several file systems simultaneously using a single application which should work and look alike on all desktop platforms it supports."*.
 
 Application is designed to be plug-able from the ground up i.e. anyone with experience of working with .NET Core will be able to add support for any new storage service by implementing a simple plugin. Support for below mentioned storage services are complete (or planned) as of now. If you would like addition of more storage services, please raise request [here](https://github.com/nullvoid-creations/Jaya/issues).
-- [x] File System
-- [x] Dropbox
-- [x] Google Drive
+- [ ] File System
+- [ ] Dropbox
+- [ ] Google Drive
 - [ ] Apple iCloud Drive ([help wanted](https://github.com/nullvoid-creations/Jaya/issues/17))
 - [ ] Microsoft OneDrive
 - [ ] Box
@@ -38,7 +36,7 @@ Application is designed to be plug-able from the ground up i.e. anyone with expe
 - [ ] SugarSync
 - [ ] pCloud
 - [ ] Media Fire
-- [x] FTP/SFTP
+- [ ] FTP/SFTP
 - [ ] Amazon S3
 - [ ] Azure Blob Storage
 
@@ -48,11 +46,9 @@ This project is in early beta at the moment so it's not suitable for general use
 
 This project would have not existed without the availbility of below mentioned fantastic frameworks and tools.
 
-* [.NET Core](https://github.com/dotnet/core)
+* [.NET](https://github.com/dotnet/core)
 * [Avalonia UI](https://avaloniaui.net/)
 * [Visual Studio](https://visualstudio.microsoft.com/vs/)
-* [Cake](https://cakebuild.net/)
-* [Inno Setup](https://www.jrsoftware.org/isinfo.php)
 
 ## Screenshots
 
@@ -76,7 +72,7 @@ Plugins UI (WIP)
 
 ## Roadmap
 
-See the [open issues](https://github.com/JayaFM/Jaya/issues) and [project boards](https://github.com/nullvoid-creations/Jaya/projects) for list of proposed features (and known issues). You are more than welcome to make feature requests and lodge any bugs you encounter. 
+See the [open issues](https://github.com/waliarubal/Jaya/issues) and [project boards](https://github.com/waliarubal/Jaya/projects) for list of proposed features (and known issues). You are more than welcome to make feature requests and lodge any bugs you encounter. 
 
 ## Contributing
 
@@ -88,9 +84,9 @@ A designer! Not a problem, create new vector icons and images for the UI. Sugges
 
 None of the above, you can still buy the core contributors coffee or donate funds to procure Mac for development [here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DEXCFJ6R48SR2).
 
-* [Rubal Walia](https://github.com/waliarubal): Original Concept and Development
-* [Splitwirez](https://github.com/Splitwirez): UI and UX Specialist
-* [Giorgio Zoppi](https://github.com/giorgiozoppi): Development
+* [Rubal Walia](https://github.com/waliarubal): Concept and Development
+* ~~[Splitwirez](https://github.com/Splitwirez): UI and UX Specialist~~ (No More Contributing)
+* ~~[Giorgio Zoppi](https://github.com/giorgiozoppi): Development~~ (No More Contributing)
 
 ## Getting Started (Technical)
 
@@ -107,6 +103,6 @@ Technical users with programming experience can try things out, just open the pr
 Distributed under The 3-Clause BSD License. See [here](/LICENSE) for more information.
 
 <blockquote>
-<p lang="en" dir="ltr">This is an amazing and clever thing by <a href="https://twitter.com/walia_rubal?ref_src=twsrc%5Etfw" target="_blank">@imnew2game</a> - it&#39;s a *cross platform file explorer application* for Windows, Mac and Linux written in .NET Core/C# and Avalonia! <a href="https://github.com/nullvoid-creations/Jaya">https://github.com/nullvoid-creations/Jaya</a> SWEET. It&#39;s fun to see how people build things like this.</p>
+<p lang="en" dir="ltr">This is an amazing and clever thing by <a href="https://twitter.com/walia_rubal?ref_src=twsrc%5Etfw" target="_blank">@imnew2game</a> - it&#39;s a *cross platform file explorer application* for Windows, Mac and Linux written in .NET Core/C# and Avalonia! <a href="https://github.com/waliarubal/Jaya">https://github.com/waliarubal/Jaya</a> SWEET. It&#39;s fun to see how people build things like this.</p>
 &mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/status/1186681229480906753?ref_src=twsrc%5Etfw" target="_blank">October 22, 2019</a>
 </blockquote>
