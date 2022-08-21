@@ -5,7 +5,6 @@
 </p>
 <h3 align="center">Jaya File Manager (JayaFM)</h3>
 <p align="center">
-  <img alt="Build status" src="https://github.com/nullvoid-creations/Jaya/workflows/build/badge.svg">
   <a href="https://github.com/waliarubal/Jaya/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/waliarubal/Jaya"></a>
   <a href="https://github.com/waliarubal/Jaya/network" target="_blank"><img alt="GitHub forks" src="https://img.shields.io/github/forks/waliarubal/Jaya"></a>
   <a href="/LICENSE.md" target="_blank"><img alt="MIT license" src="https://img.shields.io/github/license/waliarubal/Jaya"></a>
