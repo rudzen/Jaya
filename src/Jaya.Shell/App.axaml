@@ -1,14 +1,13 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:Jaya.Shell"
+             xmlns:theme="using:Jaya.Shell.Themes"
              x:Class="Jaya.Shell.App">
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
 
     <Application.Styles>
-        <FluentTheme Mode="Dark"/>
-        <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/JayaFluent.axaml"/>
-        <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/ColorSchemes/FluentDark.axaml"/>
+        <theme:JayaFluentTheme Mode="Dark"/>
     </Application.Styles>
 </Application>

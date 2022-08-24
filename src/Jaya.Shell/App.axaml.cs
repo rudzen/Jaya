@@ -8,6 +8,7 @@ using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Themes.Fluent;
 using Jaya.Shell.ViewModels;
 using Jaya.Shell.Views;
+using Jaya.Shell.Themes;
 
 namespace Jaya.Shell
 {
@@ -22,8 +23,33 @@ namespace Jaya.Shell
             string dsgnThemeArg = args.FirstOrDefault(x => x.StartsWith(DSGN_THEME));
             if (!(string.IsNullOrEmpty(dsgnThemeArg) || string.IsNullOrWhiteSpace(dsgnThemeArg)))
             {
-                string themeName = dsgnThemeArg.Substring(DSGN_THEME.Length);
-                if (themeName == "Light")
+                var theme = Styles.OfType<JayaFluentTheme>().FirstOrDefault();
+
+                string themeParam = dsgnThemeArg.Substring(DSGN_THEME.Length);
+                string colorScheme = themeParam;
+                string density = null; //theme!.DensityStyle.ToString();
+                if (themeParam.Contains(','))
+                {
+                    string[] paramParts = themeParam.Split(',');
+                    if (paramParts.Length >= 2)
+                    {
+                        colorScheme = paramParts[0];
+                        density = paramParts[1];
+                    }
+                }
+
+                if (Enum.TryParse<FluentThemeMode>(colorScheme, out FluentThemeMode themeMode))
+                {
+                    theme!.Mode = themeMode;
+                }
+                if (
+                        (density != null)
+                        && Enum.TryParse<DensityStyle>(density, out DensityStyle densityStyle)
+                    )
+                {
+                    theme!.DensityStyle = densityStyle;
+                }
+                /*if (themeName == "Light")
                 {
                     (Styles[0] as FluentTheme).Mode = FluentThemeMode.Light;
                     var include = Styles[2] as StyleInclude;
@@ -36,7 +62,7 @@ namespace Jaya.Shell
                             )
                     };
                     Styles.Insert(2, include);
-                }
+                }*/
             }
         }
 

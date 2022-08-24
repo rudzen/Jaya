@@ -7,8 +7,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
-    <AvaloniaResource Include="Styles\*.axaml" />
-    <AvaloniaResource Include="Styles\**\*.axaml" />
+    <AvaloniaResource Include="Themes\**\*.axaml" />
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>

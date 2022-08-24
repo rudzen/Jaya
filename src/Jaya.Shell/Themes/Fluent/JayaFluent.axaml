@@ -19,14 +19,14 @@
     </Styles.Resources>
 
 
-    <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/JayaFluent.CommandBar.axaml"/>
-    <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/JayaFluent.NavBar.axaml"/>
-    <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/JayaFluent.StatusBar.axaml"/>
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/CommandBar.axaml"/>
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/NavBar.axaml"/>
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/StatusBar.axaml"/>
 
 
 
-    <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/Controls/Window.axaml"/>
-    <!--StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/Controls/CaptionButtons.axaml"/-->
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Controls/Window.axaml"/>
+    <!--StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Controls/CaptionButtons.axaml"/-->
     
     
     <Style Selector="GridSplitter.paneSplitter">

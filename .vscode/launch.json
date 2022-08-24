@@ -12,7 +12,10 @@
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/bin/Jaya.Shell.dll",
             "args": [
-                "--designer-theme=Light"
+                //"--designer-theme=Dark"
+                //"--designer-theme=Dark,Compact"
+                //"--designer-theme=Light"
+                "--designer-theme=Light,Compact"
             ],
             "cwd": "${workspaceFolder}/bin",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
