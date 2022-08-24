@@ -62,12 +62,8 @@
     </Style>
 
 
-    <!--Window[IsActive=False] /template/ Border.headerAreaBackdrop,
-                    Window:not(Window[ActualTransparencyLevel=Mica]) /template/ Border.headerAreaBackdrop,-->
-    
     <Style Selector="Window /template/ Border.headerAreaBackdrop">
         <Setter Property="Background" Value="{DynamicResource JayaFM.Window.HeaderOpaqueBackgroundBrush}"/>
-        <!--Setter Property="Background" Value="#FFFF00FF"/-->
     </Style>
     
     <Style Selector="Window[IsExtendedIntoWindowDecorations=False] /template/ Border.headerAreaBackdrop">
@@ -76,6 +72,5 @@
     
     <Style Selector="Window[IsActive=True][IsExtendedIntoWindowDecorations=True][ActualTransparencyLevel=Mica] /template/ Border.headerAreaBackdrop">
         <Setter Property="Background" Value="{DynamicResource JayaFM.Window.HeaderMicaBackgroundBrush}"/>
-        <!--Setter Property="Background" Value="#FF00FF00"/-->
     </Style>
 </Styles>

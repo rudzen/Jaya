@@ -1,0 +1,14 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:v="using:Jaya.Shell.Views">
+    <Style Selector="GridSplitter.paneSplitter">
+        <Setter Property="ResizeDirection" Value="Columns" />
+        <Setter Property="ResizeBehavior" Value="PreviousAndNext" />
+        <Setter Property="Background" Value="{DynamicResource JayaFM.PaneSplitterBrush}" />
+        <Setter Property="Grid.Row" Value="2" />
+        <Setter Property="MinWidth" Value="2" />
+    </Style>
+</Styles>

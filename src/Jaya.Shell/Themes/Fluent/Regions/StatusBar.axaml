@@ -10,7 +10,7 @@
         <Setter Property="Margin" Value="0,6" />
     </Style>
     <Style Selector="v|StatusBarView TextBlock">
-        <Setter Property="Foreground" Value="#DEDEDE" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}" />
         <Setter Property="Margin" Value="12,4" />
         <Setter Property="FontSize" Value="12" />
         <Setter Property="VerticalAlignment" Value="Center" />
@@ -20,19 +20,20 @@
         <Setter Property="CornerRadius" Value="0" />
         <Setter Property="Padding" Value="2" />
     </Style>
-    <Style Selector="v|StatusBarView ToggleButton:checked /template/ ContentPresenter">
-        <Setter Property="Background" Value="#666666" />
-        <Setter Property="BorderBrush" Value="#838383" />
-    </Style>
     <Style Selector="v|StatusBarView ToggleButton:pointerover /template/ ContentPresenter">
-        <Setter Property="Background" Value="#4D4D4D" />
-        <Setter Property="BorderBrush" Value="#636363" />
+        <Setter Property="Background" Value="{DynamicResource JayaFM.StatusBar.ViewButton.HoverBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.StatusBar.ViewButton.HoverBorderBrush}" />
     </Style>
-    <Style Selector="v|StatusBarView ToggleButton:pressed  /template/ ContentPresenter">
-        <Setter Property="Background" Value="#666666" />
+    <!--Style Selector="v|StatusBarView ToggleButton:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.StatusBar.ViewButton.SelectedBackgroundBrush}" />
+    </Style-->
+    <Style Selector="v|StatusBarView ToggleButton:pressed /template/ ContentPresenter,
+                    v|StatusBarView ToggleButton:checked /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.StatusBar.ViewButton.SelectedBackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.StatusBar.ViewButton.SelectedBorderBrush}" />
     </Style>
     <Style Selector="v|StatusBarView ToggleButton > PathIcon">
-        <Setter Property="Foreground" Value="#E0DFDF" />
+        <Setter Property="Foreground" Value="{Binding $parent[ContentPresenter].Foreground, Mode=OneWay}" />
         <Setter Property="Width" Value="16" />
         <Setter Property="Height" Value="16" />
     </Style>

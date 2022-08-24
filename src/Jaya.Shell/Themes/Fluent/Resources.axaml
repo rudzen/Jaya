@@ -1,0 +1,26 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <Styles.Resources>
+        <SolidColorBrush x:Key="JayaFM.Window.MainBackgroundBrush" Color="{DynamicResource JayaFM.Window.MainBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.Window.HeaderMicaBackgroundBrush" Color="{DynamicResource JayaFM.Window.HeaderMicaBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.Window.HeaderOpaqueBackgroundBrush" Color="{DynamicResource JayaFM.Window.HeaderOpaqueBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.Window.HeaderBorderBrush" Color="{DynamicResource JayaFM.Window.HeaderBorderColor}"/>
+
+        <SolidColorBrush x:Key="JayaFM.PaneSplitterBrush" Color="{DynamicResource JayaFM.PaneSplitterColor}"/>
+
+
+        <SolidColorBrush x:Key="JayaFM.NavBar.FieldBorderBrush" Color="{DynamicResource JayaFM.NavBar.FieldBorderColor}"/>
+
+
+        <SolidColorBrush x:Key="JayaFM.StatusBar.SeparatorBrush" Color="{DynamicResource JayaFM.StatusBar.SeparatorColor}"/>
+
+        <SolidColorBrush x:Key="JayaFM.StatusBar.ViewButton.HoverBackgroundBrush" Color="{DynamicResource JayaFM.StatusBar.ViewButton.HoverBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.StatusBar.ViewButton.HoverBorderBrush" Color="{DynamicResource JayaFM.StatusBar.ViewButton.HoverBorderColor}"/>
+
+        <SolidColorBrush x:Key="JayaFM.StatusBar.ViewButton.SelectedBackgroundBrush" Color="{DynamicResource JayaFM.StatusBar.ViewButton.SelectedBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.StatusBar.ViewButton.SelectedBorderBrush" Color="{DynamicResource JayaFM.StatusBar.ViewButton.SelectedBorderColor}"/>
+    </Styles.Resources>
+</Styles>

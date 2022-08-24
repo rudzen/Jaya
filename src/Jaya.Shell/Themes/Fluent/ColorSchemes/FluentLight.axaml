@@ -16,5 +16,11 @@
 
 
         <Color x:Key="JayaFM.StatusBar.SeparatorColor">#FFF7F7F7</Color>
+
+        <StaticResource x:Key="JayaFM.StatusBar.ViewButton.HoverBackgroundColor" ResourceKey="SystemAccentColorLight3"/>
+        <StaticResource x:Key="JayaFM.StatusBar.ViewButton.HoverBorderColor" ResourceKey="SystemAccentColorLight1"/>
+
+        <StaticResource x:Key="JayaFM.StatusBar.ViewButton.SelectedBackgroundColor" ResourceKey="SystemAccentColorLight3"/>
+        <StaticResource x:Key="JayaFM.StatusBar.ViewButton.SelectedBorderColor" ResourceKey="SystemAccentColor"/>
     </Styles.Resources>
 </Styles>

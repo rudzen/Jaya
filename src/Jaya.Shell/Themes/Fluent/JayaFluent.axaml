@@ -3,37 +3,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
-    <Styles.Resources>
-        <SolidColorBrush x:Key="JayaFM.Window.MainBackgroundBrush" Color="{DynamicResource JayaFM.Window.MainBackgroundColor}"/>
-        <SolidColorBrush x:Key="JayaFM.Window.HeaderMicaBackgroundBrush" Color="{DynamicResource JayaFM.Window.HeaderMicaBackgroundColor}"/>
-        <SolidColorBrush x:Key="JayaFM.Window.HeaderOpaqueBackgroundBrush" Color="{DynamicResource JayaFM.Window.HeaderOpaqueBackgroundColor}"/>
-        <SolidColorBrush x:Key="JayaFM.Window.HeaderBorderBrush" Color="{DynamicResource JayaFM.Window.HeaderBorderColor}"/>
-
-        <SolidColorBrush x:Key="JayaFM.PaneSplitterBrush" Color="{DynamicResource JayaFM.PaneSplitterColor}"/>
-
-
-        <SolidColorBrush x:Key="JayaFM.NavBar.FieldBorderBrush" Color="{DynamicResource JayaFM.NavBar.FieldBorderColor}"/>
-
-
-        <SolidColorBrush x:Key="JayaFM.StatusBar.SeparatorBrush" Color="{DynamicResource JayaFM.StatusBar.SeparatorColor}"/>
-    </Styles.Resources>
-
-
-    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/CommandBar.axaml"/>
-    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/NavBar.axaml"/>
-    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/StatusBar.axaml"/>
-
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Resources.axaml"/>
 
 
     <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Controls/Window.axaml"/>
-    <!--StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Controls/CaptionButtons.axaml"/-->
-    
-    
-    <Style Selector="GridSplitter.paneSplitter">
-        <Setter Property="ResizeDirection" Value="Columns" />
-        <Setter Property="ResizeBehavior" Value="PreviousAndNext" />
-        <Setter Property="Background" Value="{DynamicResource JayaFM.PaneSplitterBrush}" />
-        <Setter Property="Grid.Row" Value="2" />
-        <Setter Property="MinWidth" Value="2" />
-    </Style>
+
+
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/Body.axaml"/>
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/CommandBar.axaml"/>
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/NavBar.axaml"/>
+    <StyleInclude Source="avares://Jaya.Shell/Themes/Fluent/Regions/StatusBar.axaml"/>
 </Styles>

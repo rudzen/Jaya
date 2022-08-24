@@ -4,9 +4,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:v="using:Jaya.Shell.Views">
-    <!--Style Selector="Window[IsExtendedIntoWindowDecorations=False] v|ToolBarView">
-        <Setter Property="Background" Value="{DynamicResource JayaFM.Window.HeaderOpaqueBackgroundBrush}"/>
-    </Style-->
     <Style Selector="v|ToolBarView">
         <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.Window.HeaderBorderBrush}"/>
         <Setter Property="BorderThickness" Value="0,0,0,1" />
@@ -72,7 +69,6 @@
 
     <Style Selector="v|ToolBarView MenuItem">
         <Setter Property="FontSize" Value="14" />
-        <!--Setter Property="Foreground" Value="#FFFFFF" /-->
         <Setter Property="Margin" Value="2" />
         <Setter Property="CornerRadius" Value="4" />
     </Style>

@@ -16,5 +16,11 @@
 
 
         <Color x:Key="JayaFM.StatusBar.SeparatorColor">#FF212121</Color>
+
+        <Color x:Key="JayaFM.StatusBar.ViewButton.HoverBackgroundColor">#FF4D4D4D</Color>
+        <Color x:Key="JayaFM.StatusBar.ViewButton.HoverBorderColor">#FF636363</Color>
+
+        <Color x:Key="JayaFM.StatusBar.ViewButton.SelectedBackgroundColor">#FF666666</Color>
+        <Color x:Key="JayaFM.StatusBar.ViewButton.SelectedBorderColor">#FF838383</Color>
     </Styles.Resources>
 </Styles>
