@@ -7,6 +7,8 @@
     </Application.DataTemplates>
 
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme Mode="Dark"/>
+        <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/JayaFluent.axaml"/>
+        <StyleInclude Source="avares://Jaya.Shell/Styles/Fluent/ColorSchemes/FluentDark.axaml"/>
     </Application.Styles>
 </Application>

@@ -1,0 +1,39 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:v="using:Jaya.Shell.Views">
+    <Style Selector="v|StatusBarView Rectangle.VerticalSeparator">
+        <Setter Property="Fill" Value="{DynamicResource JayaFM.StatusBar.SeparatorBrush}" />
+        <Setter Property="Width" Value="2" />
+        <Setter Property="Margin" Value="0,6" />
+    </Style>
+    <Style Selector="v|StatusBarView TextBlock">
+        <Setter Property="Foreground" Value="#DEDEDE" />
+        <Setter Property="Margin" Value="12,4" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="v|StatusBarView ToggleButton">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Padding" Value="2" />
+    </Style>
+    <Style Selector="v|StatusBarView ToggleButton:checked /template/ ContentPresenter">
+        <Setter Property="Background" Value="#666666" />
+        <Setter Property="BorderBrush" Value="#838383" />
+    </Style>
+    <Style Selector="v|StatusBarView ToggleButton:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#4D4D4D" />
+        <Setter Property="BorderBrush" Value="#636363" />
+    </Style>
+    <Style Selector="v|StatusBarView ToggleButton:pressed  /template/ ContentPresenter">
+        <Setter Property="Background" Value="#666666" />
+    </Style>
+    <Style Selector="v|StatusBarView ToggleButton > PathIcon">
+        <Setter Property="Foreground" Value="#E0DFDF" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="Height" Value="16" />
+    </Style>
+</Styles>

@@ -1,0 +1,68 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <Style Selector="Window">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.Window.MainBackgroundBrush}"/>
+        <Setter Property="ExtendClientAreaToDecorationsHint" Value="True"/>
+    </Style>
+
+    <Style Selector="Window[IsExtendedIntoWindowDecorations=True]">
+        <!--Setter Property="TransparencyLevelHint" Value="Mica"/-->
+        <Setter Property="TransparencyLevelHint" Value="Mica"/>
+        <!--Setter Property="Background" Value="Transparent"/-->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Border Name="PART_TransparencyFallback" IsHitTestVisible="False" />
+                    <DockPanel>
+                        <Border Classes="headerAreaBackdrop"
+                                Height="{Binding #TitleBar.Bounds.Height, Mode=OneWay}"
+                                IsHitTestVisible="False"
+                                DockPanel.Dock="Top"/>
+                        <Border Background="{TemplateBinding Background}" IsHitTestVisible="False" />
+                    </DockPanel>
+                    <Panel Background="Transparent" Margin="{TemplateBinding WindowDecorationMargin}"/>
+                    <VisualLayerManager>
+                        <VisualLayerManager.ChromeOverlayLayer>
+                            <Panel>
+                                <TitleBar x:Name="TitleBar" />
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Top"
+                                            Margin="8,8,0,0"
+                                            Spacing="4"
+                                            IsVisible="{Binding #TitleBar.IsVisible, Mode=OneWay}">
+                                    <Rectangle Width="16"
+                                            Height="16"
+                                            Fill="#FFFF00FF"/>
+                                    <TextBlock x:Name="TitleText"
+                                            Text="{TemplateBinding Title}"
+                                            Foreground="{DynamicResource SystemControlForegroundBaseHighBrush}"
+                                            IsHitTestVisible="False"/>
+                                </StackPanel>
+                            </Panel>
+                        </VisualLayerManager.ChromeOverlayLayer>
+                        <ContentPresenter Name="PART_ContentPresenter"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        Content="{TemplateBinding Content}"
+                                        Margin="{TemplateBinding Padding}"
+                                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </VisualLayerManager>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="Window[IsActive=False] /template/ TextBlock#TitleText">
+        <Setter Property="Opacity" Value="0.5"/>
+    </Style>
+    <Style Selector="Window[IsExtendedIntoWindowDecorations=True]:not(Window[ActualTransparencyLevel=Mica]) /template/ Border.headerAreaBackdrop,
+                    Window[IsActive=False] /template/ Border.headerAreaBackdrop">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.Window.HeaderOpaqueBackgroundBrush}"/>
+    </Style>
+    <Style Selector="Window[IsActive=True][IsExtendedIntoWindowDecorations=True][ActualTransparencyLevel=Mica] /template/ Border.headerAreaBackdrop">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.Window.HeaderMicaBackgroundBrush}"/>
+    </Style>
+</Styles>

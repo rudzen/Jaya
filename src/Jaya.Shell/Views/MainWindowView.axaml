@@ -8,23 +8,25 @@
     Title="Jaya"
     Width="800"
     Height="600"
+    ExtendClientAreaTitleBarHeightHint="{Binding #TopArea.Bounds.Height}"
     mc:Ignorable="d">
     <Grid ColumnDefinitions="180,Auto,*,Auto,Auto" RowDefinitions="Auto,Auto,*,Auto,Auto">
-        <Grid.Styles>
-            <Style Selector="GridSplitter">
-                <Setter Property="ResizeDirection" Value="Columns" />
-                <Setter Property="ResizeBehavior" Value="PreviousAndNext" />
-                <Setter Property="Background" Value="#2B2B2B" />
-                <Setter Property="Grid.Row" Value="2" />
-                <Setter Property="MinWidth" Value="2" />
-            </Style>
-        </Grid.Styles>
-        <v:ToolBarView Grid.ColumnSpan="5" />
+        <StackPanel x:Name="TopArea"
+                    Orientation="Vertical"
+                    Grid.ColumnSpan="5">
+            <Rectangle Height="30"
+                    Opacity="0"
+                    IsHitTestVisible="False"
+                    IsVisible="{Binding $parent[Window].IsExtendedIntoWindowDecorations, Mode=OneWay}"/>
+            <v:ToolBarView />
+        </StackPanel>
         <v:AddressBarView Grid.Row="1" Grid.ColumnSpan="5" />
         <v:NavigationPaneView Grid.Row="2" />
-        <GridSplitter Grid.Column="1" />
+        <GridSplitter Classes="paneSplitter"
+                    Grid.Column="1" />
         <v:ItemsView Grid.Row="2" Grid.Column="2" />
-        <GridSplitter Grid.Column="3" />
+        <GridSplitter  Classes="paneSplitter"
+                    Grid.Column="3" />
         <v:DetailsPaneView Grid.Row="2" Grid.Column="5" />
         <v:PreviewPaneView
             Grid.Row="2"
