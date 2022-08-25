@@ -17,7 +17,7 @@
   * [Screenshots](#screenshots)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
-* [Getting Started (Technical)](#getting-started)
+* [Getting Started (Technical)](#getting-started-(technical))
 * [License](#license)
 
 ## About The Project
