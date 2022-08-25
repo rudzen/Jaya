@@ -17,7 +17,7 @@
   * [Screenshots](#screenshots)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
-* [Getting Started (Technical)](#getting-started-(technical))
+* [Getting Started (Technical)](#getting-started)
 * [License](#license)
 
 ## About The Project
@@ -86,7 +86,7 @@ None of the above, you can still buy the core contributors coffee or donate fund
 * [Rubal Walia](https://github.com/waliarubal): Concept and Development
 * [Splitwirez](https://github.com/Splitwirez): UI and UX Specialist
 
-## Getting Started (Technical)
+## Getting Started
 
 Technical users with programming experience can try things out, just open the project in Visual Studio 2017 IDE or Visual Studio 2019 IDE and run it in 'Debug' mode. Follow below mentioned steps to show your love and support towards project growth.
 
