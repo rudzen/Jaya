@@ -17,7 +17,7 @@
   * [Screenshots](#screenshots)
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
-* [Getting Started (Technical)](#getting-started)
+* [Getting Started](#getting-started)
 * [License](#license)
 
 ## About The Project
@@ -48,6 +48,7 @@ This project would have not existed without the availbility of below mentioned f
 * [.NET](https://github.com/dotnet/core)
 * [Avalonia UI](https://avaloniaui.net/)
 * [Visual Studio](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Screenshots
 
