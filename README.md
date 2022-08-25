@@ -84,8 +84,7 @@ A designer! Not a problem, create new vector icons and images for the UI. Sugges
 None of the above, you can still buy the core contributors coffee or donate funds to procure Mac for development [here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DEXCFJ6R48SR2).
 
 * [Rubal Walia](https://github.com/waliarubal): Concept and Development
-* ~~[Splitwirez](https://github.com/Splitwirez): UI and UX Specialist~~ (No More Contributing)
-* ~~[Giorgio Zoppi](https://github.com/giorgiozoppi): Development~~ (No More Contributing)
+* [Splitwirez](https://github.com/Splitwirez): UI and UX Specialist
 
 ## Getting Started (Technical)
 
