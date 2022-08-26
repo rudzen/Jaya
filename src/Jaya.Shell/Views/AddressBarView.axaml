@@ -4,35 +4,43 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="using:System"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,*,Auto,150">
-        <Button>
-            <PathIcon Data="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
-        </Button>
-        <Button Grid.Column="1">
-            <PathIcon Data="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
-        </Button>
-        <Button Classes="small"
-            Grid.Column="2">
-            <PathIcon Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-        </Button>
-        <Button Grid.Column="3">
-            <PathIcon Data="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
-        </Button>
+    <Grid ColumnDefinitions="Auto,*,Auto,150">
+        <StackPanel Classes="navButtons"
+                    Orientation="Horizontal"
+                    Grid.Column="0">
+            <ContentControl Classes="backForward">
+                <StackPanel Orientation="Horizontal">
+                    <Button>
+                        <PathIcon Data="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+                    </Button>
+                    <Button>
+                        <PathIcon Data="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                    </Button>
+                </StackPanel>
+            </ContentControl>
+            <Button Classes="small">
+                <PathIcon Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+            </Button>
+            <Button>
+                <PathIcon Data="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+            </Button>
+        </StackPanel>
         <ToggleButton
-            Grid.Column="4"
+            Grid.Column="1"
             Classes="field">
         </ToggleButton>
         <GridSplitter
-            Grid.Column="5"
+            Grid.Column="2"
             Width="8"
             Background="Transparent"
             ResizeBehavior="PreviousAndNext"
             ResizeDirection="Columns" />
-        <TextBox
-            Grid.Column="6"
-            Classes="field">
-        </TextBox>
+        <AutoCompleteBox x:Name="SearchBox"
+                        Classes="field"
+                        FilterMode="Contains"
+                        Grid.Column="3"/>
     </Grid>
 </UserControl>
