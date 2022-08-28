@@ -4,6 +4,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:v="using:Jaya.Shell.Views">
+    <Style Selector="v|StatusBarView">
+        <Setter Property="Height" Value="24" />
+        <Setter Property="Margin" Value="3,0" />
+    </Style>
     <Style Selector="v|StatusBarView Rectangle.VerticalSeparator">
         <Setter Property="Fill" Value="{DynamicResource JayaFM.StatusBar.SeparatorBrush}" />
         <Setter Property="Width" Value="2" />

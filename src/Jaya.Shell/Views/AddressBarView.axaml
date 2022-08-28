@@ -7,6 +7,17 @@
     xmlns:sys="using:System"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <UserControl.Styles>
+        <Style Selector="ToggleButton.field">
+            <Setter Property="Focusable" Value="False"/>
+        </Style>
+        <Style Selector="ToggleButton.field AutoCompleteBox">
+            <Setter Property="IsEnabled" Value="False"/>
+        </Style>
+        <Style Selector="ToggleButton.field AutoCompleteBox /template/ TextBox#PART_TextBox">
+            <!--Setter Property="AcceptsReturn" Value="False"/-->
+        </Style>
+    </UserControl.Styles>
     <Grid ColumnDefinitions="Auto,*,Auto,150">
         <StackPanel Classes="navButtons"
                     Orientation="Horizontal"
@@ -28,19 +39,56 @@
                 <PathIcon Data="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
             </Button>
         </StackPanel>
-        <ToggleButton
-            Grid.Column="1"
-            Classes="field">
+        <ToggleButton x:Name="AddressBar"
+                    Classes="field"
+                    Grid.Column="1">
+            <!--Grid ColumnDefinitions="Auto,*,Auto"-->
+            <DockPanel>
+                <ContentControl Classes="directoryIconContainer"
+                                DockPanel.Dock="Left">
+                    <Rectangle Fill="#FFFF00FF" Width="16" Height="16"/>
+                </ContentControl>
+                <Button x:Name="RefreshButton"
+                        DockPanel.Dock="Right"/>
+                <ToggleButton x:Name="AddressDropDownButton"
+                        IsChecked="{Binding #AddressEditField.IsDropDownOpen, Mode=TwoWay}"
+                        DockPanel.Dock="Right"/>
+                <Panel>
+                    <AutoCompleteBox x:Name="AddressEditField"
+                                    Text="C:\Users\u\Documents\etc (PLACEHOLDER)"
+                                    FilterMode="Contains"
+                                    IsEnabled="{Binding #AddressBar.IsChecked, Mode=OneWay}"
+                                    IsVisible="{Binding IsEnabled, RelativeSource={RelativeSource Mode=Self}, Mode=OneWay}"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"/>
+                    <TextBlock Text="This PC > Documents > etc (PLACEHOLDER)"
+                            VerticalAlignment="Center"
+                            IsVisible="{Binding !#AddressBar.IsChecked, Mode=OneWay}"
+                            Grid.Column="1"/>
+                </Panel>
+            </DockPanel>
+            <!--/Grid-->
         </ToggleButton>
         <GridSplitter
             Grid.Column="2"
-            Width="8"
             Background="Transparent"
             ResizeBehavior="PreviousAndNext"
             ResizeDirection="Columns" />
-        <AutoCompleteBox x:Name="SearchBox"
-                        Classes="field"
-                        FilterMode="Contains"
-                        Grid.Column="3"/>
+        <ToggleButton x:Name="SearchBar"
+                    Classes="field"
+                    Grid.Column="3">
+            <DockPanel>
+                <TemplatedControl Classes="searchIcon"
+                                DockPanel.Dock="Left"/>
+                <Button x:Name="SearchGoButton"
+                            DockPanel.Dock="Right"/>
+                <Button x:Name="SearchCancelButton"
+                            DockPanel.Dock="Right"/>
+                <AutoCompleteBox x:Name="SearchField"
+                                Watermark="Search Documents..."
+                                IsEnabled="{Binding #SearchBar.IsChecked, Mode=OneWay}"
+                                FilterMode="Contains"/>
+            </DockPanel>
+        </ToggleButton>
     </Grid>
 </UserControl>

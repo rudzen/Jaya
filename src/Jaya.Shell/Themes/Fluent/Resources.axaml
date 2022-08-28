@@ -9,10 +9,29 @@
         <SolidColorBrush x:Key="JayaFM.Window.HeaderOpaqueBackgroundBrush" Color="{DynamicResource JayaFM.Window.HeaderOpaqueBackgroundColor}"/>
         <SolidColorBrush x:Key="JayaFM.Window.HeaderBorderBrush" Color="{DynamicResource JayaFM.Window.HeaderBorderColor}"/>
 
+
+
         <SolidColorBrush x:Key="JayaFM.PaneSplitterBrush" Color="{DynamicResource JayaFM.PaneSplitterColor}"/>
 
 
-        <SolidColorBrush x:Key="JayaFM.NavBar.FieldBorderBrush" Color="{DynamicResource JayaFM.NavBar.FieldBorderColor}"/>
+
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.IdleBackgroundBrush" Color="{DynamicResource JayaFM.NavBar.Field.IdleBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.IdleBorderBrush" Color="{DynamicResource JayaFM.NavBar.Field.IdleBorderColor}"/>
+
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.HoverBackgroundBrush" Color="{DynamicResource JayaFM.NavBar.Field.HoverBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.HoverBorderBrush" Color="{DynamicResource JayaFM.NavBar.Field.HoverBorderColor}"/>
+
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.FocusBackgroundBrush" Color="{DynamicResource JayaFM.NavBar.Field.FocusBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.FocusBorderBrush" Color="{DynamicResource JayaFM.NavBar.Field.FocusBorderColor}"/>
+        
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.DisabledBackgroundBrush" Color="{DynamicResource JayaFM.NavBar.Field.DisabledBackgroundColor}"/>
+        <SolidColorBrush x:Key="JayaFM.NavBar.Field.DisabledBorderBrush" Color="{DynamicResource JayaFM.NavBar.Field.DisabledBorderColor}"/>
+
+        <SolidColorBrush x:Key="JayaFM.NavBar.Search.GoForegroundBrush" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="JayaFM.NavBar.Search.GoIdleBackgroundBrush" Color="#FF0078D4"/>
+        <SolidColorBrush x:Key="JayaFM.NavBar.Search.GoHoverBackgroundBrush" Color="#FF0091F8"/>
+        <SolidColorBrush x:Key="JayaFM.NavBar.Search.GoPressedBackgroundBrush" Color="#FF0067C0"/>
+
 
 
         <SolidColorBrush x:Key="JayaFM.StatusBar.SeparatorBrush" Color="{DynamicResource JayaFM.StatusBar.SeparatorColor}"/>

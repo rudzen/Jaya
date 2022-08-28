@@ -9,10 +9,24 @@
         <Color x:Key="JayaFM.Window.HeaderOpaqueBackgroundColor">#FFF3F3F3</Color>
         <Color x:Key="JayaFM.Window.HeaderBorderColor">#19000000</Color>
 
+
+
         <Color x:Key="JayaFM.PaneSplitterColor">#FFF7F7F7</Color>
 
 
-        <Color x:Key="JayaFM.NavBar.FieldBorderColor">#FFD9D9D9</Color>
+
+        <Color x:Key="JayaFM.NavBar.Field.IdleBackgroundColor">#B9FFFFFF</Color>
+        <Color x:Key="JayaFM.NavBar.Field.IdleBorderColor">#26000000</Color>
+
+        <Color x:Key="JayaFM.NavBar.Field.HoverBackgroundColor">#E5FFFFFF</Color>
+        <StaticResource x:Key="JayaFM.NavBar.Field.HoverBorderColor" ResourceKey="JayaFM.NavBar.Field.IdleBorderColor"/>
+
+        <Color x:Key="JayaFM.NavBar.Field.FocusBackgroundColor">#FFFFFFFF</Color>
+        <StaticResource x:Key="JayaFM.NavBar.Field.FocusBorderColor" ResourceKey="JayaFM.NavBar.Field.IdleBorderColor"/>
+        
+        <Color x:Key="JayaFM.NavBar.Field.DisabledBackgroundColor">#19FFFFFF</Color>
+        <Color x:Key="JayaFM.NavBar.Field.DisabledBorderColor">#12000000</Color>
+
 
 
         <Color x:Key="JayaFM.StatusBar.SeparatorColor">#FFF7F7F7</Color>

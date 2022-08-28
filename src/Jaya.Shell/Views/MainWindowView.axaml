@@ -14,7 +14,7 @@
         <StackPanel x:Name="TopArea"
                     Orientation="Vertical"
                     Grid.ColumnSpan="5">
-            <Rectangle Height="30"
+            <Rectangle Classes="titleBarSpacer"
                     Opacity="0"
                     IsHitTestVisible="False"
                     IsVisible="{Binding $parent[Window].IsExtendedIntoWindowDecorations, Mode=OneWay}"/>

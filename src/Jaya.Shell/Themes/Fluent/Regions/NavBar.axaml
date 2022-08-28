@@ -43,20 +43,205 @@
         <Setter Property="Height" Value="9" />
     </Style>
 
-    <Style Selector="v|AddressBarView ToggleButton.field,
-                    v|AddressBarView AutoCompleteBox.field">
+    <Style Selector="v|AddressBarView GridSplitter">
+        <Setter Property="Width" Value="8"/>
+    </Style>
+
+    <!--Style Selector="v|AddressBarView ToggleButton.field">
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field /template/ ContentPresenter">
+        <Setter Property="Background" Value="Transparent"/>
+    </Style-->
+    <Style Selector="v|AddressBarView ToggleButton.field">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Field.IdleBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.Field.IdleBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="0"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Padding" Value="0" />
+        <!--Setter Property="Template">
+            <ControlTemplate>
+                <Border x:Name="PART_BorderElement"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                    <ContentPresenter x:Name="PART_ContentPresenter"
+                                    Background="Transparent"
+                                    BorderBrush="Transparent"
+                                    BorderThickness="0"
+                                    CornerRadius="0"
+                                    Content="{TemplateBinding Content}"
+                                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                                    Padding="{TemplateBinding Padding}"
+                                    RecognizesAccessKey="True"
+                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Border>
+            </ControlTemplate>
+        </Setter-->
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field:not(:disabled) /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource ToggleButtonForeground}" />
+    </Style>
+
+    <Style Selector="v|AddressBarView ToggleButton.field:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Field.HoverBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.Field.HoverBorderBrush}"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field:checked /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Field.FocusBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.Field.FocusBorderBrush}"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field:disabled /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Field.DisabledBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.Field.DisabledBorderBrush}"/>
+    </Style>
+    
+    
+
+    <Style Selector="v|AddressBarView ToggleButton.field AutoCompleteBox,
+                    v|AddressBarView ToggleButton.field AutoCompleteBox /template/ TextBox#PART_TextBox">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field AutoCompleteBox /template/ TextBox#PART_TextBox /template/ Border#PART_BorderElement">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style Selector="v|AddressBarView ToggleButton.field TemplatedControl.searchIcon,
+                    v|AddressBarView ToggleButton.field#AddressBar ContentControl.directoryIconContainer,
+                    v|AddressBarView ToggleButton.field#AddressBar > :is(Panel) > :is(Button),
+                    v|AddressBarView ToggleButton.field#SearchBar :is(Button)">
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Width" Value="{Binding Bounds.Height, RelativeSource={RelativeSource Mode=Self}, Mode=OneWay}"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field#AddressBar ContentControl.directoryIconContainer,
+                    v|AddressBarView ToggleButton.field#AddressBar > :is(Panel) > :is(Button),
+                    v|AddressBarView ToggleButton.field#SearchBar :is(Button)">
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field#AddressBar > :is(Panel) > :is(Button),
+                    v|AddressBarView ToggleButton.field#SearchBar :is(Button)">
+        <Setter Property="CornerRadius" Value="0"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field#AddressBar > :is(Panel) > :is(Button),
+                    v|AddressBarView ToggleButton.field Button#SearchCancelButton">
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    
+    <Style Selector="v|AddressBarView ToggleButton.field#AddressBar > :is(Panel) > :is(Button)">
+        <Setter Property="Foreground" Value="{Binding $parent[ToggleButton].Foreground, Mode=OneWay}"/>
+        <Setter Property="Content" Value="AAA"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field#AddressBar Button#RefreshButton">
+        <Setter Property="ContentTemplate">
+            <DataTemplate>
+                <Path Data="M 11.5 6
+                            A 5.5,5.5 270 1 1 6,0.5
+                            A 4.75,5.5 58 0 1 10.028,3.085
+                            M 10.5 1 L 10.5 3.5 L 8 3.5"
+                    StrokeThickness="1"
+                    Stroke="{Binding Path=(TextBlock.Foreground), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContentPresenter}, Mode=OneWay}"/>
+            </DataTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field#AddressBar ToggleButton#AddressDropDownButton">
+        <Setter Property="ContentTemplate">
+            <DataTemplate>
+                <Path Data="M 0 0 L 4 4 L 8 0"
+                    StrokeThickness="1"
+                    Stroke="{Binding Path=(TextBlock.Foreground), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContentPresenter}, Mode=OneWay}"/>
+            </DataTemplate>
+        </Setter>
+    </Style>
+    
+    <Style Selector="v|AddressBarView ToggleButton.field#SearchBar TemplatedControl.searchIcon">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Path Data="M 0 12 L 6 6
+                            M 7.5 0.5
+                            A 3.5,3.5 270 1 0 11,4
+                            A 3.5,3.5 90 0 0 7.5,0.5"
+                    StrokeThickness="1"
+                    Stroke="{Binding Path=(TextBlock.Foreground), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContentPresenter}, Mode=OneWay}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="v|AddressBarView ToggleButton.field#SearchBar Button">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Content" Value="1"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field#SearchBar Button#SearchGoButton">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Search.GoIdleBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource JayaFM.NavBar.Search.GoForegroundBrush}"/>
+        <Setter Property="ContentTemplate">
+            <DataTemplate>
+                <Path Data="M 0 6 L 12 6
+                            M 6 0 L 12 6 L 6 12"
+                    StrokeThickness="1"
+                    Stroke="{Binding Path=(TextBlock.Foreground), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContentPresenter}, Mode=OneWay}"/>
+            </DataTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field Button#SearchGoButton /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource JayaFM.NavBar.Search.GoForegroundBrush}"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field Button#SearchGoButton:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Search.GoHoverBackgroundBrush}"/>
+    </Style>
+    <Style Selector="v|AddressBarView ToggleButton.field Button#SearchGoButton:pressed /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Search.GoPressedBackgroundBrush}"/>
+    </Style>
+
+
+    <Style Selector="v|AddressBarView ToggleButton.field Button#SearchCancelButton">
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="ContentTemplate">
+            <DataTemplate>
+                <Path Data="M 0 0 L 10 10
+                            M 10 0 L 0 10"
+                    StrokeThickness="1"
+                    Stroke="{Binding Path=(TextBlock.Foreground), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContentPresenter}, Mode=OneWay}"/>
+                    <!--{Binding $parent[ContentPresenter].(TextBlock.Foreground), Mode=OneWay}-->
+                    <!--{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContentPresenter}, Mode=OneWay}-->
+            </DataTemplate>
+        </Setter>
+    </Style>
+    
+    <Style Selector="v|AddressBarView ToggleButton.field#AddressBar > :is(Panel) > :is(Button):pressed,
+                    v|AddressBarView ToggleButton.field#SearchBar :is(Button):pressed">
+        <Setter Property="RenderTransform" Value="{x:Null}" />
+    </Style>
+    <!--Style Selector="v|AddressBarView :is(TemplatedControl).field">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Field.IdleBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.Field.IdleBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="CornerRadius" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
     </Style>
-    <Style Selector="v|AddressBarView ToggleButton.field /template/ ContentPresenter">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.FieldBorderBrush}"/>
-        <Setter Property="BorderThickness" Value="1"/>
+    <Style Selector="v|AddressBarView :is(TemplatedControl).field:pointerover /template/ Border#PART_BorderElement,
+                    v|AddressBarView :is(TemplatedControl).field:pointerover /template/ TextBox#PART_TextBox /template/ Border#PART_BorderElement">
+                <!- -, v|AddressBarView :is(TemplatedControl).field:pointerover /template/ TextBox#PART_TextBox- ->
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Field.HoverBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.Field.HoverBorderBrush}"/>
     </Style>
-    <Style Selector="v|AddressBarView AutoCompleteBox.field">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.FieldBorderBrush}"/>
-        <Setter Property="BorderThickness" Value="1"/>
+    <Style Selector="v|AddressBarView :is(TemplatedControl).field:pointerover /template/ Border#PART_BorderElement,
+                    v|AddressBarView :is(TemplatedControl).field:pointerover /template/ TextBox#PART_TextBox /template/ Border#PART_BorderElement">
+        <Setter Property="Background" Value="{DynamicResource JayaFM.NavBar.Field.HoverBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource JayaFM.NavBar.Field.HoverBorderBrush}"/>
     </Style>
+    <!- -TextBox:pointerover /template/ Border#PART_BorderElement,
+    TextBox:pointerover /template/ TextBlock#PART_Watermark, TextBox:pointerover /template/ TextBlock#PART_FloatingWatermark- ->
+    -->
 </Styles>

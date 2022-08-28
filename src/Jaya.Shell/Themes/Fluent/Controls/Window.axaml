@@ -73,4 +73,9 @@
     <Style Selector="Window[IsActive=True][IsExtendedIntoWindowDecorations=True][ActualTransparencyLevel=Mica] /template/ Border.headerAreaBackdrop">
         <Setter Property="Background" Value="{DynamicResource JayaFM.Window.HeaderMicaBackgroundBrush}"/>
     </Style>
+
+    <Style Selector="Window :is(Control).titleBarSpacer">
+    <!--Window[IsExtendedIntoWindowDecorations=True]-->
+        <Setter Property="Height" Value="30"/>
+    </Style>
 </Styles>
