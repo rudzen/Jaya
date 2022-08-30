@@ -15,13 +15,13 @@
 
 
 
-        <Color x:Key="JayaFM.NavBar.Field.IdleBackgroundColor">#B9FFFFFF</Color>
-        <Color x:Key="JayaFM.NavBar.Field.IdleBorderColor">#26000000</Color>
-        <!--Color x:Key="JayaFM.NavBar.FieldBorderColor">#FF535353</Color-->
-        <Color x:Key="JayaFM.NavBar.Field.HoverBackgroundColor">#E5FFFFFF</Color>
+        <Color x:Key="JayaFM.NavBar.Field.IdleBackgroundColor">#00FFFFFF</Color>
+        <Color x:Key="JayaFM.NavBar.Field.IdleBorderColor">#53FFFFFF</Color>
+        
+        <Color x:Key="JayaFM.NavBar.Field.HoverBackgroundColor">#46FFFFFF</Color>
         <StaticResource x:Key="JayaFM.NavBar.Field.HoverBorderColor" ResourceKey="JayaFM.NavBar.Field.IdleBorderColor"/>
 
-        <Color x:Key="JayaFM.NavBar.Field.FocusBackgroundColor">#FFFFFFFF</Color>
+        <Color x:Key="JayaFM.NavBar.Field.FocusBackgroundColor">#2CFFFFFF</Color>
         <StaticResource x:Key="JayaFM.NavBar.Field.FocusBorderColor" ResourceKey="JayaFM.NavBar.Field.IdleBorderColor"/>
         
         <Color x:Key="JayaFM.NavBar.Field.DisabledBackgroundColor">#19FFFFFF</Color>
